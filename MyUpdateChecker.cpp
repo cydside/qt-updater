@@ -53,7 +53,7 @@ void MyUpdateChecker::checkVersion(QString inVersion)
         int tVersionBuild =
             inVersion.mid(inVersion.length() - 2, 2).toInt();
 
-        if (inVersion.toInt() > MyQtUtility::instance().versionNumber())
+        if (inVersion.toInt() > "10103")
         {
             QMessageBox msgBox;
             msgBox.setWindowModality(Qt::ApplicationModal);
