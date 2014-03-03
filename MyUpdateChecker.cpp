@@ -121,7 +121,7 @@ void MyUpdateChecker::downloadFile()
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.setText(
             tr(
-                "Impossible save file %1: %2."
+                "Impossible to save the file %1: %2."
             ).arg(tLocalFileName).arg(mFile->errorString())
         );
         msgBox.setStandardButtons(QMessageBox::Ok);
@@ -204,7 +204,7 @@ void MyUpdateChecker::on_HttpFinished()
         mFile->remove();
 
         QMessageBox msgBox;
-        msgBox.setWindowTitle(tr("Attenzione!"));
+        msgBox.setWindowTitle(tr("Attention!"));
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.setText(
             tr(
