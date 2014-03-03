@@ -9,4 +9,11 @@ It aims to make things easier for the user who just uses the app.
 
 So, join me to improve this software.
 
-P.S.: It has been tested only on Windows platforms!
+# How to use #
+
+```cpp
+MyUpdateChecker *tUpdate = new MyUpdateChecker();
+tUpdate->checkForUpdates();
+```
+
+**P.S.:** It has been tested only on Windows platforms!
