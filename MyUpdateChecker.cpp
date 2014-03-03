@@ -3,10 +3,10 @@
 //------------------------------------------------------------------------------
 
 const QString MyUpdateChecker::kVersionUrl =
-    "http://www.spellbyte.com/software/memoque/memoque_ver.txt";
+    "http://www.yoursite.org/software/myapp/myapp_ver.txt";
 
 const QString MyUpdateChecker::kUpdateUrl =
-    "http://www.spellbyte.com/software/memoque/Update_Memoque.exe";
+    "http://www.yoursite.org/software/myapp/Update_MyApp.exe";
 
 
 //------------------------------------------------------------------------------
