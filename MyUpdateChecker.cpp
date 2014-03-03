@@ -57,29 +57,21 @@ void MyUpdateChecker::checkVersion(QString inVersion)
         {
             QMessageBox msgBox;
             msgBox.setWindowModality(Qt::ApplicationModal);
-            msgBox.setWindowTitle("Attenzione: Nuova versione disponibile.");
+            msgBox.setWindowTitle("New version available.");
             msgBox.setIcon(QMessageBox::Warning);
             msgBox.setText(
                 QString
                 (
-                    "E' disponibile la nuova versione %1.%2.%3, "
-                    "vuoi scaricarla?"
+                    "Version %1.%2.%3 is available, "
+                    "do you want to download it?"
                 )
                 .arg(tVersionMajor)
                 .arg(tVersionMimor)
                 .arg(tVersionBuild)
             );
-            msgBox.setInformativeText(
-                QString
-                (
-                    "E' essenziale aggiornare il programma perchè la nuova "
-                    "versione conterrà importanti migliorie e/o correzioni!"
-                )
-            );
             msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
             msgBox.setDefaultButton(QMessageBox::No);
-            msgBox.setButtonText(QMessageBox::Yes, "Si");
-            msgBox.setButtonText(QMessageBox::No, "Non adesso");
+            msgBox.setButtonText(QMessageBox::No, "Not now");
             int tRet = msgBox.exec();
 
             if (tRet == QMessageBox::Yes)
@@ -100,11 +92,11 @@ void MyUpdateChecker::downloadFile()
     if (tServerFileName.isEmpty())
     {
         QMessageBox msgBox;
-        msgBox.setWindowTitle(tr("Attenzione!"));
+        msgBox.setWindowTitle(tr("Attention!"));
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.setText(
             tr(
-                "Il file %1 non è presente sul server."
+                "File %1 is not present."
             ).arg(tServerFileName));
         msgBox.setStandardButtons(QMessageBox::Ok);
         msgBox.exec();
@@ -125,11 +117,11 @@ void MyUpdateChecker::downloadFile()
     if (!mFile->open(QIODevice::WriteOnly))
     {
         QMessageBox msgBox;
-        msgBox.setWindowTitle(tr("Attenzione!"));
+        msgBox.setWindowTitle(tr("Attention!"));
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.setText(
             tr(
-                "Impossibile salvare il file %1: %2."
+                "Impossible save file %1: %2."
             ).arg(tLocalFileName).arg(mFile->errorString())
         );
         msgBox.setStandardButtons(QMessageBox::Ok);
@@ -144,8 +136,8 @@ void MyUpdateChecker::downloadFile()
     mProgressDialog->setWindowModality(Qt::ApplicationModal);
     connect(mProgressDialog, SIGNAL(canceled()),
             this, SLOT(on_CancelDownload()));
-    mProgressDialog->setWindowTitle(tr("Memoque: download aggiornamento."));
-    mProgressDialog->setLabelText(tr("Download di %1.").arg(tServerFileName));
+    mProgressDialog->setWindowTitle(tr("MyApp"));
+    mProgressDialog->setLabelText(tr("Downloading %1.").arg(tServerFileName));
 
     mHttpRequestAborted = false;
     startRequest(kUpdateUrl);
@@ -216,7 +208,7 @@ void MyUpdateChecker::on_HttpFinished()
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.setText(
             tr(
-                "Download fallito: %1."
+                "Download failed: %1."
             ).arg(mDownloaderReply->errorString()));
         msgBox.setStandardButtons(QMessageBox::Ok);
         msgBox.exec();
@@ -315,7 +307,7 @@ void MyUpdateChecker::on_NetworkReply(QNetworkReply *inReply)
         }
         else
         {
-            qDebug() << "Errore!";
+            qDebug() << "Error!";
         }
     }
 
