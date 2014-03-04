@@ -2,9 +2,9 @@ Please follow these guidelines or have a look at the source code:
 
 ###General:###
 
-- Indent mode: **spaces**, Indent size: 4.
-- max 80 chars for row.
-- separate each funtion by //------------------------------------------------------------------------------
+- Indent mode: **spaces**, Indent size: **4**.
+- max **80** chars for row.
+- separate each funtion by **//------------------------------------------------------------------------------**
 
 ###Class Members:###
 
