@@ -1,13 +1,16 @@
 Please follow these guidelines or have a look at the source code:
 
-###Indent Mode:###
+###General:###
 
-- 4 spaces.
+- Indent mode: **spaces**, Indent size: 4.
 - max 80 chars for row.
+- separate each funtion by //------------------------------------------------------------------------------
 
 ###Class Members:###
 
-- use prefix **m** followed by a camel case name eg.: **mFilesCounter**.
+- use prefix **m** for variables followed by a camel case name eg.: **QProgressDialog *mProgressDialog;**.
+- use prefix **k** for costants followed by a camel case name eg.: **kVersionUrl**.
+- use prefix **t** inside the function for variables followed by a camel case name eg.: **QUrl tUrl(kVersionUrl);**.
 
 ###Class Funtions:###
 
