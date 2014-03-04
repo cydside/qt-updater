@@ -1,4 +1,4 @@
-Please follow these guidelines:
+Please follow these guidelines or have a look at the source code:
 
 ###Indent Mode:###
 
