@@ -2,7 +2,8 @@ Please follow these guidelines:
 
 ###Indent Mode:###
 
-- 4 spaces
+- 4 spaces.
+- max 80 chars for row.
 
 ###Class Members:###
 
