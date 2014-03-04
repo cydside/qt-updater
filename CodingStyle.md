@@ -1,6 +1,6 @@
 Please follow these guidelines:
 
-###Indent Mode:### 
+###Indent Mode:###
 
 - 4 spaces
 
