@@ -1,6 +1,8 @@
 Please follow these guidelines:
 
-**Indent Mode**: 4 spaces
+###Indent Mode:### 
+
+- 4 spaces
 
 ###Class Members:###
 
